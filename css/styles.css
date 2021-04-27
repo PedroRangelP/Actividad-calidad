@@ -1,0 +1,11 @@
+/* body {
+    background-color: #d0d0ce;
+} */
+
+.center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
