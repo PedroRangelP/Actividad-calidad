@@ -29,10 +29,14 @@ app.post('/estudiante', async (req, res) => {
 })
 
 app.get('/estudiantes', async (req, res) => {
-    const studentsSnapshot = await firebase.getStudents()
-    students = firebase.snapshotToJSON(studentsSnapshot)
-
-    res.send(JSON.stringify(students))
+    try {
+        const studentsSnapshot = await firebase.getStudents()
+        students = firebase.snapshotToJSON(studentsSnapshot)
+        res.status(200).send(JSON.stringify(students))
+    } catch (error) {
+        res.status(500).send()
+    }
+    
 })
 
 module.exports = app

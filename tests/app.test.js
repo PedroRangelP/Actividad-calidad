@@ -15,6 +15,12 @@ test('Should register user successfully', async () => {
     }).expect(200)
 })
 
+test('Should read users in database', async () => {
+    const response = await request(app)
+        .get('/estudiantes')
+        .send().expect(200)
+})
+
 test('Should fail user register because user is an adult', async () => {
     const response = await request(app).post('/estudiante').send({
         nombre: "Javier",
