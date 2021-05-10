@@ -21,7 +21,6 @@
   "homepage": "https://github.com/PedroRangelP/Actividad-calidad#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "firebase": "^8.5.0",
     "firebase-admin": "^9.7.0"
   },
   "devDependencies": {
